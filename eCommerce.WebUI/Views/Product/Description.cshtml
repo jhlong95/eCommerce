@@ -1,0 +1,31 @@
+﻿@model eCommerce.Domain.Entities.Product
+
+<div>
+    <h3>@Model.Name</h3>
+
+    <section>
+        <div class="product-image">
+            <img class="img-thumbnail" width="200" height="200"
+                 src="@Url.Action("GetImage", "Product", new { Model.ProductID })" />
+        </div>
+        <hr />
+        <div class="layout-aside">
+            <h5><strong>Product Price: </strong></h5>
+            <h3>@Model.Price.ToString("c")</h3>
+            <hr />
+            <p>
+                <strong>Description: <br /></strong>
+                @Model.Description
+            </p>
+            <hr />
+        </div>
+        @using (Html.BeginForm("AddToCart", "Cart"))
+        {
+            <div>
+                @Html.HiddenFor(x => x.ProductID)
+                @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                <input type="submit"  class="btn btn-success" value="Add to Cart" />
+            </div>
+        }
+    </section>
+</div>

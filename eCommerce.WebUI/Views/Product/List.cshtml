@@ -1,0 +1,13 @@
+﻿@using eCommerce.WebUI.HtmlHelpers
+@model eCommerce.WebUI.Models.ProductListViewModel
+
+
+@{
+        ViewBag.Title = "Products";
+}
+
+@Html.Partial("ProductSummary", Model.Products)
+
+<div class="btn-group col-md-push-10">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory }))
+</div>

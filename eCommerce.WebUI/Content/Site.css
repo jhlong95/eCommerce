@@ -1,0 +1,58 @@
+﻿body {
+    max-width: inherit;
+    background-color: black;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.row {
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: black;
+    background: url('images/background.png');
+    color: white;
+}
+
+.col-md-4-product-image {
+    padding: 0px;
+}
+
+.product-image-caption {
+    width: 100%;
+    height:30%;
+    bottom: 0.0rem;
+    position: absolute;
+    text-align:center;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.35);
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.product-image-caption-inner-container {
+    position: relative;
+    top: 10%;
+}
+
+.product-image-caption-product-name {
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+
+.product-image-caption-product-price {
+    font-size: 1vw;
+    font-weight: 400;
+}
+
