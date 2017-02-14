@@ -1,17 +1,17 @@
 ﻿@model IEnumerable<eCommerce.Domain.Entities.Product>
 
-<div class="row glyphicon-align-center">
+<div class="row ">
     @foreach (var item in Model)
     {
         if (item.ImageData != null)
         {
                 <div class="col-md-4 col-md-4-product-image">
                     <a href="@Url.Action("Description", new { productId = item.ProductID })">
-                        <img class="thumbnail" width="289" height="300" src="@Url.Action("GetImage", "Product", new { item.ProductID })" />
+                        <img class="img-responsive" src="@Url.Action("GetImage", "Product", new { item.ProductID })" />
                         <div class="product-image-caption">
                             <div class="product-image-caption-inner-container">
                                 <div class="product-image-caption-product-name">@item.Name</div>
-                                <div class="product-image-caption-product-price">@item.Price</div>
+                                <div class="product-image-caption-product-price">@item.Price.ToString("c")</div>
                             </div>
                         </div>
                     </a>

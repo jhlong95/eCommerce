@@ -13,7 +13,7 @@ namespace eCommerce.Domain.Concrete
     public class EmailSettings
     {
         public string MailToAddress = "orders@example.com";
-        public string MailFromAddress = "electrology@example.com";
+        public string MailFromAddress = "electro-utopia@example.com";
         public bool UseSsl = true;
         public string Username = "MySmtpUsername";
         public string Password = "MySmtpPassword";

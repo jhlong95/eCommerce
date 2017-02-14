@@ -20,21 +20,21 @@
     <div class="navbar navbar-inverse" role="navigation">
         <a class="navbar-brand" href="#">
             <span class="hidden-xs">Electro-Utopia</span>
-            <div class="visible-xs">Electro-</div>
-            <div class="visible-xs">Utopia</div>
+            <div class="visible-xs">Electro-Utopia</div>
         </a>
+        @Html.ActionLink("Admin Log In", "Index", "Admin",
+        new { returnUrl = Request.Url.PathAndQuery },
+        new { @class = "btn btn-default navbar-btn" })
         @Html.Action("Summary", "Cart")
     </div>
     <div class="visible-xs">
         @Html.Action("Menu", "Nav", new { horizontalLayout = true })
     </div>
-    <div class="row panel">
         <div id="categories" class="col-xs-3 hidden-xs">
             @Html.Action("Menu", "Nav")
         </div>
         <div class="col-md-12 col-md-8">
             @RenderBody()
         </div>
-    </div>
 </body>
 </html>

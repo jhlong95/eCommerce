@@ -1,12 +1,8 @@
 ﻿body {
     max-width: inherit;
     background-color: black;
-}
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    background: url('images/background.jpg');
+    color: white;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -16,12 +12,12 @@ textarea {
     max-width: 280px;
 }
 
-.row {
-    margin-left: 15px;
-    margin-right: 15px;
-    background-color: black;
-    background: url('images/background.png');
-    color: white;
+.img-responsive {
+    width: 300px;
+    height:300px;
+    min-height: 120px;
+    min-width: 120px;
+    padding: 10px;
 }
 
 .col-md-4-product-image {
@@ -29,16 +25,16 @@ textarea {
 }
 
 .product-image-caption {
-    width: 100%;
+    width: 87.5%;
     height:30%;
     bottom: 0.0rem;
     position: absolute;
     text-align:center;
     color: #ffffff;
-    background-color: rgba(0,0,0,0.35);
-    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
     padding-bottom: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .product-image-caption-inner-container {
@@ -47,12 +43,12 @@ textarea {
 }
 
 .product-image-caption-product-name {
-    font-size: 1.4vw;
+    font-size: 1.35vw;
     font-weight: 500;
 }
 
 .product-image-caption-product-price {
     font-size: 1vw;
-    font-weight: 400;
+    font-weight: 500;
 }
 
