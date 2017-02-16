@@ -46,7 +46,7 @@ namespace eCommerce.WebUI.Controllers
             }
             else
             {
-                //there is something wrong with the data values
+                //if something went wrong the the data value
                 return View(product);
             }
         }
