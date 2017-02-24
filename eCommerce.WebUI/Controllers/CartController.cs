@@ -23,6 +23,11 @@ namespace eCommerce.WebUI.Controllers
 
         public ViewResult Index(Cart cart, string returnUrl)
         {
+            if (cart.Lines.Count() == 0)
+            {
+                ModelState.AddModelError("", "Your Cart is Empty!");
+            }
+
             return View(new CartIndexViewModel
             {
                 ReturnUrl = returnUrl,

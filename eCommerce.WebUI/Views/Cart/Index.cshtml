@@ -20,6 +20,19 @@
         </tr>
     </thead>
     <tbody>
+        @if (Model.Cart.Lines.Count() == 0)
+        {
+            <tr>
+                <td>
+                    @using (Html.BeginForm())
+                {
+                        @Html.ValidationSummary();
+                }
+
+                </td>
+            </tr>
+        }
+
         @foreach (var line in Model.Cart.Lines)
         {
             <tr>
@@ -53,7 +66,10 @@
 <div>
     <div>
         @Html.ActionLink("Continue Shopping", "List", "Product", null, new { @class = "btn btn-primary", @style = "float: left" })
-        @Html.ActionLink("Checkout Now", "Checkout", null, new { @class = "btn btn-primary", @style = "float: right" })
+        @if (Model.Cart.Lines.Count() != 0)
+        {
+            @Html.ActionLink("Checkout Now", "Checkout", null, new { @class = "btn btn-primary", @style = "float: right" })
+        }
     </div>
 </div>
 
